@@ -11,8 +11,8 @@ namespace LinqPractice
         static void Main(string[] args)
         {
             Linq linq = new Linq();
-            linq.ReturnNoDuplicates();
-            linq.ReturnAverage();
+            //linq.ReturnNoDuplicates();
+            //linq.ReturnAverage();
             linq.StringAlphabeticalFrequency();
         }
     }

@@ -45,10 +45,11 @@ namespace LinqPractice
 
         }
         public void StringAlphabeticalFrequency()
-        {
-            var result = name.Select(n => n.ToString().ToLower()).OrderBy(o => o).GroupBy(p => p);
-            Console.WriteLine(result);
-            Console.ReadLine();
+        {            
+            var result = name.ToLower().OrderBy(l => l).GroupBy(n => n).Select(n => new { Character = n.Key, Count = n.Count() });
+            foreach (var item in result)
+                Console.WriteLine(item.Character + "" + item.Count);         
+                Console.ReadLine();
         }
     }
 }
